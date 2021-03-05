@@ -74,7 +74,7 @@ const onCountryChange=async(event)=>{
      <h1>COVID-19 TRACKER </h1>
      <FormControl className="app_dropdown">
        <Select variant="outlined" onChange={onCountryChange} value={country}>
-        
+
            <MenuItem value ="worldwide">Worldwide</MenuItem>
           {
             countries.map(country=>(
@@ -85,16 +85,16 @@ const onCountryChange=async(event)=>{
      </FormControl>
      </div>
      <div className="app_stats">
-<InfoBox isRed={true} active={casesType==='cases'} onClick={e=>setCasesType('cases')} title='Coronavirus cases' total={prettyPrintStat(countryInfo.cases)} 
+<InfoBox isRed={true} active={casesType==='cases'} onClick={e=>setCasesType('cases')} title='Coronavirus cases' total={prettyPrintStat(countryInfo.cases)}
 cases={ prettyPrintStat(countryInfo.todayCases)}/>
-<InfoBox isRed={false} active={casesType==='recovered'}  onClick={e=>setCasesType('recovered')} title='Recovered' total={prettyPrintStat(countryInfo.recovered)} 
+<InfoBox isRed={false} active={casesType==='recovered'}  onClick={e=>setCasesType('recovered')} title='Recovered' total={prettyPrintStat(countryInfo.recovered)}
 cases={prettyPrintStat(countryInfo.todayRecovered)}/>
-<InfoBox isRed={true} active={casesType==='deaths'}  onClick={e=>setCasesType('deaths')} title='Deaths' total={prettyPrintStat(countryInfo.deaths)} 
+<InfoBox isRed={true} active={casesType==='deaths'}  onClick={e=>setCasesType('deaths')} title='Deaths' total={prettyPrintStat(countryInfo.deaths)}
 cases={prettyPrintStat(countryInfo.todayDeaths)}/>
 
      </div>
-    
-     
+
+
        {/*Table*/}
        {/*Graph*/}
        {/* Map*/}
